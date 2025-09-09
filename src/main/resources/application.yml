@@ -1,0 +1,7 @@
+youtube:
+  api:
+    key: AIzaSyBighqVWR65zZOq_57tYCN7Q7Xk6gEKZ7w
+    base-url: https://www.googleapis.com/youtube/v3
+
+server:
+  port: 8081
