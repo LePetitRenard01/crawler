@@ -1,4 +1,4 @@
-# http://localhost:8081/api/youtube/channel/search?channelName=숲부엉이
+# api/youtube/channel/search?channelName={channelName}
 ```
 [
     {
