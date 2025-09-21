@@ -1,7 +1,29 @@
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      indent-output: true
+    deserialization:
+      adjust-dates-to-context-time-zone: false
+
+# YouTube API 설정
 youtube:
   api:
-    key: AIzaSyBighqVWR65zZOq_57tYCN7Q7Xk6gEKZ7w
+    key: ${YOUTUBE_API_KEY}
     base-url: https://www.googleapis.com/youtube/v3
+    max-results-per-request: 50
+  # JSON 파일 저장 경로 설정
+  storage:
+    path: ./youtube_contents
+
+# 크롤링 설정
+crawler:
+  youtube:
+    default-max-comments: 50
+    batch-size: 10
+    delay-between-requests: 1000 # milliseconds
+    max-concurrent-requests: 2
 
 server:
   port: 8081
